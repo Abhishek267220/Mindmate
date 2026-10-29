@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MindMate Mood Tracker – Select your mood and get a motivational message." />
+  <title>Mood Tracker – MindMate</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">Mind<span>Mate</span> 🧠</div>
+    <div class="hamburger" id="hamburger">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="planner.html">📅 Study Planner</a></li>
+      <li><a href="mood.html" class="active">😊 Mood Tracker</a></li>
+      <li><a href="ai-learning.html">🤖 AI Learning</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" style="padding:50px 40px;">
+    <h1>😊 Mood <span>Tracker</span></h1>
+    <p>How are you feeling right now? Select your mood and get a motivational message to brighten your day!</p>
+  </section>
+
+  <section class="section">
+    <div class="mood-container">
+
+      <h2 class="section-title">How Are You Feeling Today?</h2>
+      <p class="section-subtitle">Click on an emoji that matches your current mood.</p>
+
+      <!-- Mood buttons – each has a data-mood value used by JavaScript -->
+      <div class="mood-grid">
+        <button class="mood-btn" data-mood="happy">
+          <span class="mood-emoji">😄</span>Happy
+        </button>
+        <button class="mood-btn" data-mood="sad">
+          <span class="mood-emoji">😢</span>Sad
+        </button>
+        <button class="mood-btn" data-mood="anxious">
+          <span class="mood-emoji">😰</span>Anxious
+        </button>
+        <button class="mood-btn" data-mood="excited">
+          <span class="mood-emoji">🤩</span>Excited
+        </button>
+        <button class="mood-btn" data-mood="tired">
+          <span class="mood-emoji">😴</span>Tired
+        </button>
+        <button class="mood-btn" data-mood="confused">
+          <span class="mood-emoji">🤔</span>Confused
+        </button>
+      </div>
+
+      <!-- Message box – hidden by default, shown by JavaScript when a mood is clicked -->
+      <div class="mood-message" id="mood-message">
+        <h3 id="mood-msg-title"></h3>
+        <p id="mood-msg-text"></p>
+      </div>
+
+      <div style="margin-top:50px;">
+        <h2 class="section-title">Daily Wellness Reminders 🌿</h2>
+        <p class="section-subtitle">Small habits for a healthier student life.</p>
+        <div class="cards-grid" style="max-width:750px; margin:0 auto;">
+          <div class="card">
+            <div class="card-icon">🧘</div>
+            <h3>5-Minute Meditation</h3>
+            <p>Close your eyes, breathe deeply, and clear your mind. Even 5 minutes reduces stress.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🚶</div>
+            <h3>Short Walk</h3>
+            <p>A 10-minute walk improves mood, creativity, and focus better than a second cup of coffee!</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📵</div>
+            <h3>Digital Detox</h3>
+            <p>Put your phone away for 1 hour before bed. Better sleep leads to better memory.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>🧠 <strong>MindMate – Student Study & Wellness Hub</strong></p>
+    <p style="margin-top:6px;">Built with ❤️ using HTML, CSS &amp; JavaScript &nbsp;|&nbsp; First-Semester AIML Project</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

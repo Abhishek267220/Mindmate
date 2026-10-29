@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MindMate Study Planner – Manage your daily timetable and goals." />
+  <title>Study Planner – MindMate</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">Mind<span>Mate</span> 🧠</div>
+    <div class="hamburger" id="hamburger">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="planner.html" class="active">📅 Study Planner</a></li>
+      <li><a href="mood.html">😊 Mood Tracker</a></li>
+      <li><a href="ai-learning.html">🤖 AI Learning</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" style="padding:50px 40px;">
+    <h1>📅 Study <span>Planner</span></h1>
+    <p>Organise your day, manage your subjects, and keep track of your goals. One task at a time!</p>
+  </section>
+
+  <section class="section">
+    <div class="planner-container">
+
+      <h2 class="section-title" style="text-align:left; margin-bottom:16px;">🗓️ Daily Timetable</h2>
+      <p style="color:var(--gray); font-size:0.9rem; margin-bottom:20px;">
+        Sample timetable for a B.Tech AIML student.
+      </p>
+
+      <table class="timetable">
+        <thead>
+          <tr>
+            <th>⏰ Time</th>
+            <th>📚 Subject</th>
+            <th>📖 Topic</th>
+            <th>📝 Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7:00 AM – 8:00 AM</td>
+            <td><span class="badge badge-blue">Mathematics</span></td>
+            <td>Matrices & Determinants</td>
+            <td>Theory</td>
+          </tr>
+          <tr>
+            <td>9:00 AM – 10:30 AM</td>
+            <td><span class="badge badge-green">Programming (C)</span></td>
+            <td>Functions & Arrays</td>
+            <td>Practical</td>
+          </tr>
+          <tr>
+            <td>11:00 AM – 12:00 PM</td>
+            <td><span class="badge badge-orange">Physics</span></td>
+            <td>Semiconductor Devices</td>
+            <td>Theory</td>
+          </tr>
+          <tr>
+            <td>1:00 PM – 2:00 PM</td>
+            <td>🍽️ Lunch Break</td>
+            <td>Rest & Recharge</td>
+            <td>–</td>
+          </tr>
+          <tr>
+            <td>2:00 PM – 3:30 PM</td>
+            <td><span class="badge badge-purple">AI Fundamentals</span></td>
+            <td>Introduction to Machine Learning</td>
+            <td>Theory</td>
+          </tr>
+          <tr>
+            <td>4:00 PM – 5:00 PM</td>
+            <td><span class="badge badge-pink">English</span></td>
+            <td>Technical Writing & Communication</td>
+            <td>Theory</td>
+          </tr>
+          <tr>
+            <td>7:00 PM – 8:30 PM</td>
+            <td><span class="badge badge-blue">Mathematics</span></td>
+            <td>Practice Problems – Integration</td>
+            <td>Practice</td>
+          </tr>
+          <tr>
+            <td>9:00 PM – 10:00 PM</td>
+            <td><span class="badge badge-green">Programming (C)</span></td>
+            <td>Lab Assignment – Sorting Algorithms</td>
+            <td>Practical</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title" style="text-align:left; margin-bottom:16px;">✅ Daily Goals Checklist</h2>
+      <p style="color:var(--gray); font-size:0.9rem; margin-bottom:20px;">
+        Add your study goals for today. Tick them off as you complete them!
+      </p>
+
+      <div class="task-input-area">
+        <h3>➕ Add a New Task</h3>
+        <div class="input-row">
+          <input type="text" id="task-input" placeholder="e.g. Revise Chapter 3 of AI Fundamentals..." />
+          <button class="btn btn-primary" id="add-task-btn">Add Task</button>
+        </div>
+      </div>
+
+      <div class="task-list">
+        <h3>📋 My Tasks &nbsp;<small id="task-counter" style="color:var(--gray); font-size:0.8rem; font-weight:400;">0 / 0 tasks completed</small></h3>
+        <ul id="task-list-ul">
+          <li class="task-item">
+            <input type="checkbox" onchange="toggleDone(this)" />
+            <span>Complete Programming Lab Assignment on Arrays</span>
+            <button class="task-delete" onclick="deleteTask(this)">🗑️</button>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" onchange="toggleDone(this)" />
+            <span>Read Chapter 2 of AI Fundamentals textbook</span>
+            <button class="task-delete" onclick="deleteTask(this)">🗑️</button>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" onchange="toggleDone(this)" />
+            <span>Solve 10 practice problems from Mathematics</span>
+            <button class="task-delete" onclick="deleteTask(this)">🗑️</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:30px; background:linear-gradient(135deg,#eef2ff,#e0e7ff);">
+        <div class="card-icon">💡</div>
+        <h3>Study Tips for Today</h3>
+        <p>
+          🔹 Use the Pomodoro technique: 25 minutes of study + 5 minute break.<br />
+          🔹 Review your notes within 24 hours to improve retention by 80%.<br />
+          🔹 Teach what you learned to a friend – best way to check your understanding!
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>🧠 <strong>MindMate – Student Study & Wellness Hub</strong></p>
+    <p style="margin-top:6px;">Built with ❤️ using HTML, CSS &amp; JavaScript &nbsp;|&nbsp; First-Semester AIML Project</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    window.addEventListener('load', function () { updateCounter(); });
+  </script>
+
+</body>
+</html>
